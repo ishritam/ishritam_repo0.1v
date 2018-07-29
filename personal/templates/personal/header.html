@@ -1,0 +1,574 @@
+<!doctype html>
+<html>
+<head>
+<title>
+Shritam Kumar Mund
+</title>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'personal/css/bootstrap.min.css' %}">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+
+ <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+#You can disable zooming capabilities on mobile devices by adding user-scalable=no to the viewport meta tag.-->
+	
+	<style type="text/css">
+		<!--html,
+		body {
+		  height:100%
+		}-->
+		body {
+  background: #222;
+  color: #FFF;padding:0;margin:0;
+}
+
+.skewed-bg {
+background: #396afc;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 200px 0;
+  -webkit-transform: skew(0deg, -10deg);
+  transform: skew(0deg, -10deg);
+  margin-top: -200px;
+}
+.skewed-bg .content {
+  -webkit-transform: skew(0deg, 10deg);
+  transform: skew(0deg, 10deg);
+  
+}
+.skewed-bg .content .title {
+  padding-top: 100px;
+  font-weight: normal;
+}
+.skewed-bg .content .text {
+  width: 60%;
+  margin: 25px auto;
+  color: #ccfff2;
+}
+
+.footer {
+  padding-top: 300px;
+}
+.footer .credits {
+  text-align: center;
+  color: #666;
+}
+.footer .credits .link {
+  color: #00B285;
+  text-decoration: none;
+}
+
+
+a {
+    color: #6195FF;
+    text-decoration: none;
+    -webkit-transition: 0.2s opacity;
+    transition: 0.2s opacity;
+}
+a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+    opacity: 0.8;
+    color: #6195FF;
+}
+#footer {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #1C1D21
+}
+
+.footer-logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo>a>img {
+    max-height: 80px;
+}
+.footer-follow {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.footer-follow li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 13px;
+}
+
+.footer-follow li a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #6195FF;
+  color:#FFF;
+}
+
+.footer-copyright p {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0;
+  color:#868F9B;
+}
+
+
+
+
+
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+@import 'https://fonts.googleapis.com/css?family=Roboto:700,400';
+/*
+*  Basic Reset
+*/
+ 
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/**
+ * Basics Styles
+ */
+html {
+	font-size: 62.5%;
+}
+body {
+	
+	font-family: Roboto;
+	font-weight: 400;
+	font-size: 1.6em;
+	line-height: 1.6;
+	color: #666;
+}
+
+a {
+	text-decoration: none;
+	color: #3498db;
+}
+	a:hover {
+		color: #2980b9;
+	}
+
+h2 {
+	line-height: 1.2;
+	margin-bottom: 1.6rem;
+}
+
+.wrapper {
+	max-width: 400px;
+	margin: 50px auto;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+/**
+ * Helpers
+ */
+.border-tlr-radius { 
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px; 
+}
+
+.text-center { text-align: center; }
+
+.radius { border-radius: 2px; }
+
+.padding-tb { padding-top: 1.6rem; padding-bottom: 1.6rem;}
+
+.shadowDepth0 { box-shadow: 0 1px 3px rgba(0,0,0, 0.12); }
+
+.shadowDepth1 {
+   box-shadow: 
+  		0 1px 3px rgba(0,0,0, 0.12),
+    	0 1px 2px rgba(0,0,0, 0.24);      
+}
+
+
+/**
+ * Card Styles
+ */
+
+.card {
+	background-color: #fff;
+	margin-bottom: 1.6rem;
+}
+
+.card__padding {
+	padding: 1.6rem;
+}
+ 
+
+
+.card__content {
+	position: relative;
+	
+}
+
+/* card meta */
+.card__meta time {
+	font-size: 1.5rem;
+	color: #bbb;
+	margin-left: 0.8rem;
+}
+
+/* card article */
+.card__article a {
+	text-decoration: none;
+	color: #444;
+	transition: all 0.5s ease;
+}
+	.card__article a:hover {
+		color: #2980b9;
+	}
+
+	
+	@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+.container {
+  max-width: 480px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.container:before, .container:after {
+  content: "";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+
+html {
+  font-size: 16px;
+}
+	
+	body {
+  font-family: 'Lato', Tahoma, Geneva, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #212121;
+}
+
+.header {
+  background: #3399ff;
+  position: relative;
+  overflow: hidden;
+}
+.header:after {
+  content: "";
+  background: #f4f4f4;
+  width: 120%;
+  height: 20%;
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  transform: rotate(-2deg);
+}
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+*, *:before, *:after {
+  moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inconsolata", sans-serif;
+  font-size: 14px;
+  padding: 0 0 40px 0;
+  margin: 0;
+}
+
+.mobile {
+  width: 2.35in;
+  height: 4.87in;
+  margin: 0 auto;
+  background: #222;
+  border-radius: 25px;
+  padding: 50px 5px;
+  box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.2);
+}
+.mobile .mobile-body {
+  background: #fff;
+  height: 100%;
+  padding-top: 40px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.container2 {
+  overflow-y: scroll;
+  height: 327px;
+  padding: 5px;
+ 
+  line-height: 1.4;
+  color:black;
+  font-family: 'Lobster', cursive;font-family: 'Markazi Text', serif;
+}
+.container2::-webkit-scrollbar {
+  width: 5px;
+}
+.container2::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.container2::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.oop {
+  position: relative;
+  z-index: auto;
+  height: 10px;
+  background: linear-gradient(141deg, #48ded4 0%, #a026bf 51%, #e82c75 75%);
+  margin-bottom: 20px;
+}
+
+.header {
+  height: 100vh;
+  display: table;
+  width: 100%;
+}
+
+.heading {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 2.3em;
+  letter-spacing: 5px;
+  text-align: center;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #333;
+  position: relative;
+}
+.heading small {
+  font-size: 50%;
+}
+
+.navbar {
+  background: #fff;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+.navbar .logo {
+  padding: 12px 5px 12px 35px;
+}
+.navbar .logo a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1em;
+}
+.navbar button.burger {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 0;
+  background: transparent;
+  padding: 8px 15px;
+  pointer: cursor;
+  outline: none;
+}
+.navbar button.burger span {
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #000;
+  margin: 3px 0;
+  border-radius: 4px;
+  transition: all .4s ease-in-out;
+}
+.navbar button.burger:focus span:first-child {
+  -webkit-transform-origin: 2px 9px;
+          transform-origin: 2px 9px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.navbar button.burger:focus span:last-child {
+  -webkit-transform-origin: 2px -5px;
+          transform-origin: 2px -5px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.navbar button.burger:focus + ul {
+  max-height: 500px;
+}
+.navbar ul.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.6s ease-in-out;
+}
+.navbar ul.menu > li {
+  display: block;
+  padding: 10px 15px;
+  transition: all 0.2s ease;
+}
+.navbar ul.menu > li:hover {
+  background: linear-gradient(141deg, #48ded4 0%, #a026bf 51%, #e82c75 75%);
+  color: #fff;
+}
+
+
+	</style>
+</head>
+<body class="body" style="background-color:#f6f6f6">
+<div class="skewed-bg">
+	<div class="content">
+	<div class="container-fluid" style="min-height:95%; ">
+		<div class="row">
+			  <div class="col-sm-2">
+				  <br>
+				  <center>
+					<img src="{% static 'personal/img/profileme.JPEG' %}" class="responsive-img" style='max-height:200px;border-radius: 50%;' alt="face">
+				  </center>
+			  </div>
+			  <div class="col-sm-10" style="color: white">
+				  <br>
+				  <center>
+				    <div class="w3-panel w3-card-4 w3-center" style="width:100%">
+    <span style="font-size:100px">❝</span><br>
+    <p style="margin-top:-60px; font-size:18px"><i><b>Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday’s code.</b></i></p>
+  </div>
+				  </center>
+			  </div>
+		</div><hr>
+
+		<div class="row">
+		  <div class="col-sm-2">
+		  <br>
+
+		  <br>
+		   <!-- Great, til you resize. -->
+			<!--<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">-->
+			<div class="well bs-sidebar" id="sidebar" style="background-color:#fff;text-align:center">
+			  <ul class="nav nav-pills flex-column">
+				<li class="nav-item"><a class="nav-link" href='/'>Home</a></li>
+				<li class="nav-item"><a class="nav-link" href='/blog/'>Blog</a></li>
+				<li class="nav-item"><a class="nav-link" href='/contact/'>Skills</a></li>
+				<ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+			  </ul>
+			</div> <!--well bs-sidebar affix-->
+		  </div> <!--col-sm-2-->
+		  <div class="col-sm-10">
+		  
+			<div class='container-fluid' style='font-family: 'Lobster', cursive;font-family: 'Markazi Text', serif;'>
+			<br><br>
+			   {% block content %}
+			 
+			   {% endblock %}	
+			</div>
+		  </div>
+		</div> 
+	</div>	</div>
+</div>
+
+	<footer class="footer">
+		<div class="container-fluid" style='margin-left:15px'>
+			
+		</div>
+	</footer>	
+	
+</div>
+
+<!--	
+	
+<div class="oop"></div>
+
+<div class="mobile">
+  <div class="mobile-body">
+    <div class="navbar">
+      <div class="logo"><a href="#">Post By @ishritam</a></div>
+      <button class="burger" type="button"><span></span><span></span><span></span></button>
+      <ul class="menu">
+        <li>Home</li>
+        <li>Work</li>
+        <li>About</li>
+        <li>Contact Me</li>
+      </ul>
+    </div>
+    <div class="container2" style="background-color:#223031">
+      <h2>About This website</h2>
+      <p>
+<b>Frontend</b> :<br> HTML<br>Css3<br>Bootstrap<br>JQuery<br>JavaScript<hr>
+<b>Backend</b> :<br> Django<br>Python3<br><hr>	  
+</p>
+    </div>
+  </div>
+</div>
+-->
+
+
+<div class="container-fluid"><div class="row row-tools row-white"><div class="col-sm-12 text-center">
+<br><br><br>
+			    	<h3>Tools I Use</h3>
+					<img width="150" class="techlogo" src="{% static 'personal/img/Anaconda.png' %}" class="responsive-img" alt="Anaconda">
+					<img width="150" class="techlogo" src="{% static 'personal/img/git.png' %}" class="responsive-img" alt="Anaconda">
+					<img width="150" class="techlogo" src="{% static 'personal/img/sublime.png' %}" class="responsive-img" alt="Anaconda">
+
+					</div></div></div>
+<footer id="footer">
+  <div class="container">
+    <!-- Row -->
+			<div class="row">
+        <div class="col-md-12">
+           <!-- footer logo -->
+					<div class="footer-logo">
+						<a href="#"><img src="http://scanfcode.com/wp-content/uploads/2018/03/logo-footer.png" alt="scanfcode"></a>
+					</div>
+					<!-- /footer logo -->
+					<!-- footer follow -->
+					<ul class="footer-follow">
+						<li><a href="https://www.facebook.com/sritam.kumarmund"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://codepen.io/ShritamKumarMund/"><i class="fa fa-codepen"></i></a></li>
+						<li><a href="https://github.com/ishritam/"><i class="fa fa-github"></i></a></li>
+						<li><a href="https://www.instagram.com/ishritam/"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/shritam-kumar-mund-45974412a"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="https://www.youtube.com/channel/UCoTpPjYBAAlnO32OBwOWkkg?view_as=subscriber"><i class="fa fa-youtube"></i></a></li>
+					</ul>
+					<!-- /footer follow -->
+					<!-- footer copyright -->
+					<div class="footer-copyright">
+						<p>Copyright © 2018-2019. All Rights Reserved. <a href="http://handsomedreams.com/" target="_blank">ishritam</a></p>
+					</div>
+					<!-- /footer copyright   -->
+				</div>
+			</div>
+			<!-- /Row -->
+		</div>
+		<!-- /Container -->
+	</footer>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

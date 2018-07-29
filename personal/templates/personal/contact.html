@@ -1,0 +1,243 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+<style>
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+.container {
+  max-width: 480px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.container:before, .container:after {
+  content: "";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Lato', Tahoma, Geneva, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #212121;
+}
+
+.header {
+  background: #3399ff;
+  position: relative;
+  overflow: hidden;
+}
+.header:after {
+  content: "";
+  background: #f4f4f4;
+  width: 120%;
+  height: 20%;
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  transform: rotate(-2deg);
+}
+
+h1 {
+  color: #f4f4f4;
+  font-size: 2rem;
+  text-align: center;
+  padding: 10rem 0;
+}
+h2{
+ color: #f4f4f4;
+ padding: 5rem 1rem;
+ 
+}
+.shead{
+ height:100px;
+  position: relative;
+ 
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
+@media screen and (min-width: 601px) {
+  h2 {
+    font-size:25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 18px;
+  }
+}
+.spacer {
+  min-height: 20rem;
+}
+
+dt:after {
+  width: 100%;
+  background-color: #e0e0e0;
+  height: 0.5rem;
+  content: "";
+  display: block;
+}
+
+dd {
+  background: red;
+  width: 0;
+  height: 0.5rem;
+  position: relative;
+  top: -0.5rem;
+}
+dd.html {
+  background: #F44336;
+}
+dd.css {
+  background: #2196F3;
+}
+dd.jquery {
+  background: #FFCA28;
+}
+dd.scss {
+  background: #F06292;
+}
+dd.javascript {
+  background: #FFA000;
+}
+dd.php {
+  background: #303F9F;
+}
+
+
+</style>
+<body>
+
+
+<div class= "col-md-10">
+<div class="spacer header">
+<h2>The field of application of technology is what interests me the most. I want to acquire the learning that will enable me to contribute to the development of a new software, which can improve efficiency and accuracy of work in the varied sphere. Digital Processing is already transforming the world of Communications. My ambition is to work at the forefront of the technology with the ability to find innovative solutions to the changing needs.I have created a little something of me, showing my programming skills, Web Development skill and the platforms, where I have made myself comfortable. </h2></div></div><br><br><div class="col-md-5">
+<div class="spacer header">
+  <h1>Programming</h1>
+</div>
+
+
+<div class="container skills">
+  <dl>
+    <dt>Python</dt>
+    <dd class="skill-percent html" data-percent="90"></dd>
+    <dt>C</dt>
+    <dd class="skill-percent css" data-percent="40"></dd>
+    <dt>Java</dt>
+    <dd class="skill-percent jquery" data-percent="60"></dd>
+    <dt>SQL</dt>
+    <dd class="skill-percent scss" data-percent="78"></dd>
+
+  </dl>
+</div>
+</div>
+
+<div class="col-md-5">
+<div class="spacer header">
+  <h1>Web Development </h1>
+</div>
+
+
+<div class="container skills">
+  <dl>
+    <dt>HTML</dt>
+    <dd class="skill-percent html" data-percent="90"></dd>
+    <dt>CSS</dt>
+    <dd class="skill-percent css" data-percent="85"></dd>
+	<dt>Bootstrap</dt>
+    <dd class="skill-percent css" data-percent="85"></dd>
+    <dt>jQuery</dt>
+    <dd class="skill-percent jquery" data-percent="60"></dd>
+    <dt>Javascript</dt>
+    <dd class="skill-percent javascript" data-percent="40"></dd>
+    <dt>PHP</dt>
+    <dd class="skill-percent php" data-percent="60"></dd>
+  </dl>
+</div>
+
+</div>
+
+
+<div class="col-md-5" >
+<div class="spacer header" style='background-image: url("webdev.jpg")' >
+				 
+  <h1>Technical Platforms </h1>
+
+</div>
+
+
+<div class="container skills">
+  <dl>
+    <dt>AWS</dt>
+    <dd class="skill-percent html" data-percent="40"></dd>
+    <dt>RPA(UiPath)</dt>
+    <dd class="skill-percent css" data-percent="85"></dd>
+    <dt>DigitalOcean</dt>
+    <dd class="skill-percent jquery" data-percent="60"></dd>
+    <dt>Blogging</dt>
+    <dd class="skill-percent scss" data-percent="55"></dd>
+    <dt>Photography</dt>
+    <dd class="skill-percent javascript" data-percent="80"></dd>
+	 </dl>
+</div>
+
+</div>
+
+
+
+
+
+<div class="col-md-5">
+<div class="spacer header">
+  <h1>Python Stuffs</h1>
+</div>
+
+
+<div class="container skills">
+  <dl>
+    <dt>Django</dt>
+    <dd class="skill-percent html" data-percent="80"></dd>
+    <dt>Flask</dt>
+    <dd class="skill-percent css" data-percent="40"></dd>
+    <dt>Jinja</dt>
+    <dd class="skill-percent jquery" data-percent="75"></dd>
+	 </dl>
+</div>
+
+</div>
+
+<script> // this has nothing to do with the animation, just forces the window to be a size that allows a scroll
+var containerHeight = $(window).height() / 2;
+
+$('.spacer').css("height", containerHeight);
+
+// Find the height of the previous section, half it so when you have scrolled more than half past the section, it triggers the animation
+var x = $('.skills').prev().height() / 4;
+
+$(window).scroll(function() {
+  // checks to see if you have scrolled far enough down to activate the animation
+  if ($(window).scrollTop() >= x) {
+    //find each element with the class .skill-percent
+    $('.skill-percent').each(function() {
+      // animate
+      $(this).animate({
+        //finds the width from the data-percent attribute
+        width: $(this).data('percent') + '%'
+      }, 1000);
+    });
+  }
+}); </script>
+
+</body>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "personal/header.html"%}
+
+{% block content %}
+<div class="wrapper">
+    		
+    		<div class="card radius shadowDepth1">
+    			
+    			<div class="card__content card__padding">
+
+
+    				<div class="card__meta">
+<h3><a href="/blog/{{post.id}}">{{ post.title }}</a></h3>
+<h6>on {{post.date}}</h6>
+
+<article class="card__article">
+	{{ post.body|safe|linebreaks}}
+	    			</article>
+    			</div>
+
+    			
+    		</div>
+    	</div>
+<br><br>
+{% endblock %}
